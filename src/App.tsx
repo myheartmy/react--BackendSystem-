@@ -1,26 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
+import renderRoutes from './routes/renderRoutes'
+import {useSelector} from 'react-redux'
+import Loading from './pages/common/loading'
+import routes from './routes'
+import { Layout, Menu} from 'antd';
+import Header from './layout/header'
+import Breadcrumb from './layout/breadcrumb'
+import Sider from './layout/sider'
+const { Content } = Layout;
+const { SubMenu } = Menu;
+
+
+const Login: React.FC<{}> = function Login(){
+  return (
+    <div>登录</div>
+  )
+}
 
 const App: React.FC = () => {
+
+  const isLogin = useSelector(state=>{
+    return (state as any).get('root').get('isLogin');
+  });
+
+  const role = useSelector(state=>(state as any).get('root').get('userInfo').get('role'));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    {/* 登录鉴权 */}
+    <Switch>
+          <Route path="/login" component={Login}/>
+          <Route render={()=>{
+            if(!isLogin){
+              return <Redirect to="/login"/>
+            }else{
+              return <Layout style={{ minHeight: '100vh' }} className="app">
+              <Sider />
+              <Layout>
+                <Header />
+                <Content style={{ margin: '0 16px' }}>
+                  <Breadcrumb />
+                  <Suspense fallback={<Loading />}>
+                    {renderRoutes(routes,role)}
+                  </Suspense>
+                </Content>
+              </Layout>
+            </Layout>;
+            }
+          }}/>
+        </Switch>
+      
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
