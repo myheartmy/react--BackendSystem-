@@ -1,0 +1,28 @@
+.app-header{
+  .menu{
+    display: flex;
+    justify-content: flex-end;
+    .title{
+      margin: 0 10px;
+    }
+  }
+  .ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    margin-right: 0;
+  }
+  background: #9137F3;
+  .ant-menu{
+    background: #9137F3;
+  }
+  .message{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    i{
+      font-size: 24px;
+    }
+    
+  }
+}
+
+
+
