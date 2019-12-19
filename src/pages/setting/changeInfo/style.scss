@@ -1,0 +1,38 @@
+#changeInfo{
+    border:1px solid #ccc;
+    min-height: 100%;
+    background: white;
+    padding:20px;
+    h2{
+        border-bottom:1px solid #ccc;
+        line-height: 44px;
+        font-size: 14px;
+        color: #999;
+    }
+    .change{
+        .info-item{
+            display: flex;
+            height: 32px;
+            line-height: 32px;
+            margin-top:20px;
+            p{
+                width:160px;
+                padding:0 20px;
+                text-align: right;
+                display: inline-block;
+                .redSpan{
+                    color:red;
+                }
+
+            }
+            input{
+                width:300px;
+            }
+           
+        }
+    }
+    button{
+        
+        margin:150px 0 0 500px;
+    }
+}

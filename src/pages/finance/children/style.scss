@@ -1,0 +1,28 @@
+#ListTable{
+    border:1px solid #ccc;
+    padding:20px;
+    background: white;
+    margin-top:20px;
+    thead,th{
+        background: #9137F3!important;
+        color:white;
+    }
+    td,th{        
+        text-align: center;
+        vertical-align: middle;
+    }
+    a{
+        color:#9137F3;
+    }
+    .handle{
+        color:#9137F3;
+        span{
+            cursor: pointer;
+        }
+    }
+    .showModel{
+        span{
+            line-height: 44px!important;
+        }
+    }
+}

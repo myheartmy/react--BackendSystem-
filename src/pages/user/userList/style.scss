@@ -1,0 +1,66 @@
+#OrderList{
+    width:100%;
+    font-size: 14px;
+    min-width: 1100px;
+    .search{
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding:10px 20px 20px;
+        background: white;
+        margin-bottom:10px;
+        .title{
+            display: flex;
+            padding: 20px 0;
+            span{
+                margin-left:5px;
+            }
+        }
+        .type{
+            display: flex;
+            line-height:100%;
+            .input{
+                display: flex;
+                input{
+                    width:180px;
+                    margin-left: 10px;
+                }
+                span{
+                    line-height:32px;
+                }
+            }
+            .selectData{
+                margin-left:20px;
+            }
+            button{
+                background: #9137F3;
+                color:white;
+                margin-left:40px;
+            }
+            .clear{
+                line-height: 32px;
+                color:#9137F3;
+                margin-left:20px;
+            }
+
+        }
+
+        
+    }
+    .order-list{
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding:10px 20px 20px;
+        background: white;
+        .title{
+            display: flex;
+            padding: 20px 0;
+            span{
+                margin-left:5px;
+            }
+        }
+        .ant-tabs-tab{
+            font-weight: bold;
+            color:#ccc;
+        }
+    }
+}

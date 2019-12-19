@@ -1,0 +1,48 @@
+#uLog{
+    .search{
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding:10px 20px 20px;
+        background: white;
+        margin-bottom:10px;
+        min-width: 1100px;
+        .title{
+            display: flex;
+            padding: 20px 0;
+            span{
+                margin-left:5px;
+            }
+        }
+        .type{
+            display: flex;
+            line-height:100%;
+            .select{
+                display: flex;
+                input{
+                    width:180px;
+                    margin-left: 10px;
+                }
+                span{
+                    line-height:32px;
+                    margin-right: 5px;
+                }
+            }
+            .selectData{
+                margin-left:20px;
+            }
+            button{
+                background: #9137F3;
+                color:white;
+                margin-left:40px;
+            }
+            .clear{
+                line-height: 32px;
+                color:#9137F3;
+                margin-left:20px;
+            }
+
+        }
+
+        
+    }
+}
