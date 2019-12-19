@@ -1,14 +1,17 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-
+import React from 'react';
+import {Link} from 'react-router-dom';
+import ActivityList from '../../common/activityList';
+import ActivityFilrate from '../../common/activityFiltrate';
+import './style.scss'
 
 const SlideShowList: React.FC<{}> = function SlideShowList(){
 
   return (
     <div>
-      <h1>轮播图列表</h1>
-      <Link to="/article/slideShow/slideShowEdit">轮播图编辑</Link><br/>
-      <Link to="/article/slideShow/slideShowRecycled">轮播图回收站</Link>
+      <ActivityFilrate/>
+      <div className='slidelist'>
+        <ActivityList/>
+      </div>
     </div>
   )
 }
