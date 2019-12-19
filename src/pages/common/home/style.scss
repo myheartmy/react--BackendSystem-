@@ -1,0 +1,104 @@
+#home{
+    .index-survey{
+        border: 1px solid #ccc;
+        padding:20px;
+        border-radius: 6px;
+        background: white;
+        margin-bottom:10px;
+        min-width: 1000px;
+
+        i{
+            margin-left:10px;
+        }
+        .selectTime{
+            font-size: 14px;
+            display: flex;
+            justify-content: flex-end;
+            width:100%;
+            height: 18px;
+            line-height: 18px;
+            margin:10px 0;
+            span{
+                padding:0 10px;
+                &:nth-of-type(1){
+                    border-right: 1px solid #ccc;
+                }
+            }
+        }
+        .survey-item{
+            display: flex;
+            padding:20px 0px;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            width: 100%;
+            .items{
+                color:white;
+                margin:0 20px;
+                border-radius: 6px;
+                padding:20px;
+                display: flex;
+                min-width: 210px;
+                box-sizing: border-box;
+                p{
+                    font-size: 14px;
+                }
+                b{
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 40px;
+                }
+                img{
+                    width:44px;
+                    height: 44px;
+                    margin:0 10px;
+                }
+                &:nth-of-type(1){
+                    background: #9919FF;
+                }
+                &:nth-of-type(2){
+                    background: #FF7699;
+                }
+                &:nth-of-type(3){
+                    background: #FCD13B;
+                }
+                &:nth-of-type(4){
+                    background: #3CD1C1;
+                }
+                
+                
+            }
+            .items-event{
+                display: flex;
+                width:250px;
+                margin:20px 0;
+                justify-content: flex-start;
+                border-right: 1px solid #ccc;
+                &:nth-last-of-type(1){
+                    border-right: none;
+                }
+                img{
+                    width:64px;
+                    height: 64px;
+                }
+                div{
+                    margin-left: 10px;
+                    text-align: center;
+                }
+                b{
+                    font-size: 18px;
+                    line-height: 36px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 28px;
+                    color:#666;
+                }
+            }
+            
+        }
+        .active{
+            font-weight: bold;
+            color: #9137F3;
+        }
+    }
+}
