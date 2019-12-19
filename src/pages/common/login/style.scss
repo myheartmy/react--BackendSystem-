@@ -1,0 +1,67 @@
+.login{
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/bg.png) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .userInfo{
+        width:700px;
+        height: 406px;
+        background: white;
+        border-radius: 6px;
+        &>div{
+            float: left;
+        }
+        .left{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .right{
+            width: 50%;
+            height: 100%;
+            h2{
+                font-size: 28px;
+                color:#9137F3;
+                text-align: center;
+                margin:48px 0 10px 0;
+                font-weight: bold;
+            }
+            p{
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color:#9137F3;
+                font-weight: bold;
+            }
+            .loginForm{
+                padding:50px;
+                input{
+                    line-height: 48px;
+                    height: 48px;
+                    margin-bottom:10px;
+                }
+                .ant-input-prefix{
+                    top:40%;
+                    color:#9137F3;
+                    
+                }
+            }
+            .remenber{
+                font-size: 12px!important;
+                .forget{
+                    float: right;
+                }
+            }
+            .login{
+                width:100%;
+                height: 44px;
+                margin-top:25px;
+            }
+        }
+    }
+
+}

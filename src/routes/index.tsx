@@ -43,6 +43,26 @@ const routes: RouteConfig[] = [
     ]
   },
 
+  // 优惠券管理
+
+  {
+    path: '/Gutschein/GutscheinEdit',
+    component: lazy(() => import('../pages/Gutschein/GutscheinEdit')),
+    breadcrumb: [
+      { title: '优惠券管理' },
+      { title: '优惠券列表',to: '/Gutschein/GutscheinList' },
+      { title: '优惠券编辑' }
+    ]
+  },
+  {
+    path: '/Gutschein/GutscheinList',
+    component: lazy(() => import('../pages/Gutschein/GutscheinList')),
+    breadcrumb: [
+      { title: '优惠券管理' },
+      { title: '订单列表' }
+    ]
+  },
+
    //客服系统
    {
     path: '/service/currentSession',
@@ -315,6 +335,14 @@ const routes: RouteConfig[] = [
   breadcrumb: [
     { title: '设置' },
     { title: '员工管理' }
+  ]
+},
+{
+  path: '/setting/changeInfo',
+  component: lazy(() => import('../pages/setting/changeInfo')),
+  breadcrumb: [
+    { title: '设置' },
+    { title: '编辑资料'},
   ]
 },
 

@@ -1,0 +1,105 @@
+#orderDetails{
+    background: white;
+    min-height: 100%;
+    padding:20px;
+    min-width: 1100px;
+    border-ra
+    .status{
+        span{
+            width:150px;
+            height: 36px;
+            display: inline-block;
+            text-align: center;
+            font-size: 12px;
+            line-height: 36px;
+            font-weight: bold;
+            color:#999;
+            &:nth-of-type(1){
+                background: url(../../../assets/u4168.png) no-repeat;
+            }
+            &:nth-of-type(1).active{
+                background: url(../../../assets/u4168_selected.png) no-repeat;
+                color:white;
+            }
+            &:nth-of-type(n+2){
+                background: url(../../../assets/u4169.png) no-repeat;
+            }
+            &:nth-of-type(n+2).active{
+                background: url(../../../assets/u4169_selected.png) no-repeat;
+                color:white;
+
+            }
+        }
+    }
+    .ant-descriptions-title{
+        border-left:2px solid #9137F3;
+        padding-left:10px;
+    }
+
+    .statusHandle{
+        line-height: 80px;
+        div{
+            div{
+                display: inline-block;
+                span{
+                    padding:0 20px 0 10px; 
+                }
+                
+
+            }
+            &:nth-of-type(1){
+                div{
+                    color:#FF9900;
+                }   
+            }
+            &:nth-of-type(2){
+                div{
+                    color:#00CC99;
+                }
+                
+            }
+            &:nth-of-type(3){
+                div{
+                    color:#9137F3;
+                }
+                
+            }
+            &:nth-of-type(4){
+                div{
+                    color:#999999;
+                }
+                
+            }
+            
+        }
+    }
+    .detailsImg{
+        width:100px;
+        height: 60px;
+        margin:auto;
+    }
+    .infoTable{
+        margin-bottom: 20px;
+        h2{
+            line-height: 24px;
+            font-weight: bold;
+            border-left:2px solid #9137F3;
+            padding-left:10px;
+            margin-bottom:20px;
+        }
+        th{
+            background: #9137F3;
+            color:white;
+        }
+        th,td{
+            text-align: center!important;
+            vertical-align: middle!important;
+        }
+        td{
+            padding:12px 16px;
+        }
+    
+
+    }
+    
+}

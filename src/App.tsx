@@ -10,7 +10,6 @@ import Breadcrumb from './layout/breadcrumb'
 import Sider from './layout/sider'
 import Login from "./pages/common/login"
 const { Content } = Layout;
-const { SubMenu } = Menu;
 
 
 

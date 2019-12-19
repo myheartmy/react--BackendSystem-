@@ -2,9 +2,11 @@ import { createStore, compose, applyMiddleware } from 'redux'
 import {combineReducers} from 'redux-immutable'
 import thunk from 'redux-thunk'
 import root from './models/root'
+import home from "./models/home"
 
 const reducer = combineReducers({
-  root
+  root,
+  home
 });
 
 

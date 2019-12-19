@@ -21,7 +21,7 @@ const AppSider: React.FC<{}> = function AppSider() {
   // 获得展开菜单ids
   const { ids } = useRouteInfo();
 
-  const [collapsed, setCollapsed] = useState<boolean>(false);
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
 

@@ -1,0 +1,48 @@
+#userEditDetail{
+    background: white;
+    padding:20px;
+    min-height: 100%;
+    min-width: 1100px;
+    .ant-descriptions-title{
+        border-left:2px solid #9137F3;
+        padding-left:10px;
+    }
+    .infoTable{
+        margin-bottom: 20px;
+        h2{
+            line-height: 24px;
+            font-weight: bold;
+            border-left:2px solid #9137F3;
+            padding-left:10px;
+            margin-bottom:20px;
+        }
+        th{
+            background: #9137F3;
+            color:white;
+        }
+        th,td{
+            text-align: center!important;
+            vertical-align: middle!important;
+        }
+        td{
+            padding:12px 16px;
+        }
+    }
+    a{
+        color:#9137F3;
+    }
+    .handle{
+        color:#9137F3;
+        span{
+            cursor: pointer;
+        }
+    }
+    .showModel{
+        span{
+            line-height: 44px!important;
+        }
+    }
+    .back{
+        margin-bottom:10px;
+    }
+}

@@ -80,6 +80,18 @@ const SiderConfig: SiderConfigInterface[] = [
     ]
   },
   {
+    id: 'Gutschein',
+    root: '优惠券管理',
+    icon: 'money-collect',
+    children: [
+      {
+        id: 'Gutschein-GutscheinList',
+        title: '优惠券列表',
+        path: '/Gutschein/GutscheinList'
+      }
+    ]
+  },
+  {
     id: 'service',
     root: '客服系统',
     icon: 'phone',
@@ -136,6 +148,11 @@ const SiderConfig: SiderConfigInterface[] = [
         id: 'setting-uLog',
         title: '操作日志',
         path: '/setting/uLog'
+      },
+      {
+        id: 'setting-changeInfo',
+        title: '修改资料',
+        path: '/setting/changeInfo'
       }
     ]
   }
