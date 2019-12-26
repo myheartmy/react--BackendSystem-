@@ -34,7 +34,7 @@ const ActivityFilrate: React.FC<{}> = function ActivityFilrate(){
                 <div className="conditions">
                     <div className="inputs">
                         <span>输入搜索 : </span>
-                        <Input placeholder="输入轮播图标题......" />
+                        <Input className="swiperslid" placeholder="输入轮播图标题......" />
                     </div>
                     {/* 日期选择器 */}
                     <div className="selectData">
