@@ -56,12 +56,12 @@ const columns = [
   for(let i=0;i<46;i++){
     data.push(
         {
-            key: i,
-            swipername: '500块一双'+i,
-            img: 32,
-            uppeople: '隔壁老樊'+ i,
-            uptime:'2019-12-12',
-            action:''
+          key: i,
+          swipername: '500块一双'+i,
+          img: 32,
+          uppeople: '隔壁老樊'+ i,
+          uptime:'2019-12-12',
+          action:''
         },
     )
   }
