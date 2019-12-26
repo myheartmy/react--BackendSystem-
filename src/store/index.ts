@@ -3,10 +3,12 @@ import {combineReducers} from 'redux-immutable'
 import thunk from 'redux-thunk'
 import root from './models/root'
 import home from "./models/home"
+import setting from "./models/setting"
 
 const reducer = combineReducers({
   root,
-  home
+  home,
+  setting
 });
 
 

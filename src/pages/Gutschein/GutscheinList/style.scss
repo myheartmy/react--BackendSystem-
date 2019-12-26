@@ -1,12 +1,13 @@
-#uLog{
+#GutscheinList{
+    width:100%;
     font-size: 14px;
+    min-width: 1100px;
     .search{
         border: 1px solid #ccc;
         border-radius: 6px;
         padding:10px 20px 20px;
         background: white;
         margin-bottom:10px;
-        min-width: 1100px;
         .title{
             display: flex;
             padding: 20px 0;
@@ -17,7 +18,7 @@
         .type{
             display: flex;
             line-height:100%;
-            .select{
+            .input{
                 display: flex;
                 input{
                     width:180px;
@@ -25,7 +26,6 @@
                 }
                 span{
                     line-height:32px;
-                    margin-right: 5px;
                 }
             }
             .selectData{
@@ -45,5 +45,22 @@
         }
 
         
+    }
+    .order-list{
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding:10px 20px 20px;
+        background: white;
+        .title{
+            display: flex;
+            padding: 20px 0;
+            span{
+                margin-left:5px;
+            }
+        }
+        .ant-tabs-tab{
+            font-weight: bold;
+            color:#ccc;
+        }
     }
 }

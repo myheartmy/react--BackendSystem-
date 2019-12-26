@@ -2,18 +2,24 @@
 import axios, {AxiosRequestConfig, AxiosInstance, AxiosResponse, AxiosPromise} from 'axios'
 import {message as messageAlert} from 'antd'
 
+messageAlert.config({
+  top: 200
+});
+
 export interface ResponseData{
   code: 0 | 1 | -1,
   message: string,
   data: any
 }
 
-class HttpRequest{
+class HtttpRequest{
 
   // 合并配置项
   private mergeConfig(...configs: AxiosRequestConfig[]): AxiosRequestConfig{
     return Object.assign({}, ...configs);
   }
+
+
 
   // 设置get请求别名
   public get(url: string, config: AxiosRequestConfig = {}): AxiosPromise{
@@ -44,26 +50,38 @@ class HttpRequest{
       config.baseURL = 'http://localhost:3000';
       return config;
     }, (error)=>{
+      this.handleError(error.message);
       return Promise.reject(error);
     });
 
     // 拦截响应
     instance.interceptors.response.use((response: AxiosResponse)=>{
+
+      //请求响应成功200，但是数据不一定是正确的
       const {data: {code, message}} = response;
       if(code === 0){
         //成功
       }else{
         // 失败
         //UI提示用户请求失败
-        messageAlert.error(message, 0.5);
+        this.handleError(message);
       }
       return response;
     }, (error)=>{
+      // 非200，比如400，500的错误
+      this.handleError(error.message);
       return Promise.reject(error);
     })
   }
+
+
+  private handleError(message: string){
+    messageAlert.error(message, 0.5);
+  }
+
   
+
 }
 
 
-export default HttpRequest;
+export default HtttpRequest;

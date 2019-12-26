@@ -6,34 +6,14 @@ enum API{
   */
   LOGIN_API = '/manager/api/login',
 
-  //.......
-
-
   //首页api
 
-  GET_HOME_API = "/api/home/data"
+  GET_HOME_API = "/api/home/data",
 
-  
-
-
-
-
-
-
+  //员工管理
+  GET_MANAGER_WORKER_FIND_API = "/manager/api/worker/find"
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

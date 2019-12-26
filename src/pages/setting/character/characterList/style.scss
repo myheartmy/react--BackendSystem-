@@ -1,12 +1,11 @@
-#uLog{
-    font-size: 14px;
+#CharacterList{
     .search{
         border: 1px solid #ccc;
         border-radius: 6px;
         padding:10px 20px 20px;
         background: white;
         margin-bottom:10px;
-        min-width: 1100px;
+         font-size: 14px;
         .title{
             display: flex;
             padding: 20px 0;
@@ -17,7 +16,7 @@
         .type{
             display: flex;
             line-height:100%;
-            .select{
+            .input{
                 display: flex;
                 input{
                     width:180px;
@@ -25,11 +24,8 @@
                 }
                 span{
                     line-height:32px;
-                    margin-right: 5px;
+                   
                 }
-            }
-            .selectData{
-                margin-left:20px;
             }
             button{
                 background: #9137F3;
@@ -46,4 +42,37 @@
 
         
     }
+    .titleAdd{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .order-list{
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding:10px 20px 20px;
+        background: white;
+        .title{
+            display: flex;
+            align-items: center;
+            span{
+                margin-left:5px;
+            }
+        }
+        .ant-tabs-tab{
+            font-weight: bold;
+            color:#ccc;
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+

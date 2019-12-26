@@ -14,7 +14,6 @@ export default class RichEditor extends React.Component{
     return (
       <div>
         <textarea id="editor"></textarea>
-        <input type="text" name="name"/>
       </div>
     )
   }

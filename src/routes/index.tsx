@@ -59,7 +59,7 @@ const routes: RouteConfig[] = [
     component: lazy(() => import('../pages/Gutschein/GutscheinList')),
     breadcrumb: [
       { title: '优惠券管理' },
-      { title: '订单列表' }
+      { title: '优惠券列表' }
     ]
   },
 

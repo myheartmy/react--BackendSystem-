@@ -1,4 +1,4 @@
-#uLog{
+#StaffList{
     font-size: 14px;
     .search{
         border: 1px solid #ccc;
@@ -6,7 +6,6 @@
         padding:10px 20px 20px;
         background: white;
         margin-bottom:10px;
-        min-width: 1100px;
         .title{
             display: flex;
             padding: 20px 0;
@@ -17,8 +16,10 @@
         .type{
             display: flex;
             line-height:100%;
-            .select{
+            .input{
                 display: flex;
+                margin-right: 20px;
+                overflow: hidden;
                 input{
                     width:180px;
                     margin-left: 10px;
@@ -46,4 +47,30 @@
 
         
     }
+    .titleAdd{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .order-list{
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding:10px 20px 20px;
+        background: white;
+        .title{
+            display: flex;
+            align-items: center;
+            span{
+                margin-left:5px;
+            }
+        }
+        .ant-tabs-tab{
+            font-weight: bold;
+            color:#ccc;
+        }
+    }
 }
+
+
+

@@ -1,4 +1,4 @@
-#changeInfo{
+#CharacterEdit{
     border:1px solid #ccc;
     min-height: 100%;
     background: white;
@@ -10,7 +10,19 @@
         font-size: 14px;
         color: #999;
     }
+    .title{
+        padding-left: 10px;
+        border-left: 2px solid #9137F3;
+        font-weight: bold;
+        margin: 20px 0;
+        font-size: 16px;
+    }
+    textarea{
+        width: 400px;
+
+    }
     .change{
+
         .info-item{
             display: flex;
             height: 32px;
@@ -31,9 +43,23 @@
             }
            
         }
+        .info{            
+            height: auto;
+        }
     }
-    button{
+    .allBtn{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .saveBtn {
+
         
-        margin:100px 0 0 500px;
+    }
+    .cancelBtn{
+        background: #ccc;
+        border-color: #ccc;
+        margin-left: 20px;
     }
 }
