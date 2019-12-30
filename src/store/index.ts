@@ -4,11 +4,13 @@ import thunk from 'redux-thunk'
 import root from './models/root'
 import home from "./models/home"
 import setting from "./models/setting"
+import user from "./models/user"
 
 const reducer = combineReducers({
   root,
   home,
-  setting
+  setting,
+  user
 });
 
 
