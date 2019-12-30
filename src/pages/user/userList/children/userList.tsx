@@ -1,29 +1,22 @@
 import React, {useCallback, useState} from 'react'
 import {  message, Table,Switch ,Popconfirm } from 'antd';
 import { Link } from 'react-router-dom'
+import {requestUserData} from "../../../../store/models/user";
+import { useDispatch, useSelector } from 'react-redux'
 import './style.scss'
 
 
-const data:any = [];
 
 
-for (let i = 0; i < 46; i++) {
-  data.push({
-    key: i,
-    ID: `${i}`,
-    nickName: 32,
-    phone: `no. ${i}`,
-    registerTime:new Date().getTime(),
-    level:`${i}`,
-    forbidden:false,
-    time:new Date().getTime()
+const UserListTable: React.FC<{data:any}> = function UserListTable({data:userDataList}) {
+  const dataList = userDataList.toJS().user.data;
+  const count =  userDataList.toJS().user.count;
+  console.log(count);
+  console.log(dataList)
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const dispatch = useDispatch();
+  
 
-  });
-}
-
-const UserListTable: React.FC<{}> = function UserListTable() {
-
-  const [selectedRowKeys,setSelectedRowKeys] = useState([]);
 
   const confirm = useCallback(()=>{
     message.info('点击了确定');
@@ -31,35 +24,47 @@ const UserListTable: React.FC<{}> = function UserListTable() {
 
   const onChange =useCallback((checked)=>{ message.info(`switch to ${checked}`)},[])
 
+  const pageChange = useCallback((page, pageSize)=>{ 
+    console.log(page,pageSize);
+    dispatch(requestUserData(page));
+    
+  },[])
   const columns = [
     {
       title: '用户ID',
-      dataIndex: 'ID',
+      dataIndex: 'id',
+      key:"id"
     },
     {
       title: '微信昵称',
-      dataIndex: 'nickName',
+      dataIndex: 'wechat',
+      key:"wechat"
     },
     {
       title: '会员手机',
-      dataIndex: 'phone',
+      dataIndex: 'vipPhone',
+      key: 'vipPhone',
     },
     {
       title: '注册时间',
       dataIndex: 'registerTime',
+      key:'registerTime',
     },
     {
       title: '会员等级',
-      dataIndex: 'level',
+      dataIndex: 'vipGrade',
+      key: 'vipGrade',
     },
     {
       title: '上次消费时间',
-      dataIndex: 'time',
+      dataIndex: 'lastConsume',
+      key: 'lastConsume',
     },
     {
       title: '禁用账户',
       render:()=><Switch defaultChecked onChange={onChange} />,
-      dataIndex: 'forbidden',
+      dataIndex: 'isForbidden',
+      key: 'isForbidden',
     },
     {
       title: '操作',
@@ -83,7 +88,7 @@ const UserListTable: React.FC<{}> = function UserListTable() {
     };
     return (
       <div id="orderListTable">
-        <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+        <Table rowSelection={rowSelection} pagination={{total:count,onChange:pageChange}} columns={columns} dataSource={dataList} />
       </div>
     )
 }

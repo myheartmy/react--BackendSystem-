@@ -18,15 +18,11 @@ const StaffList: React.FC<{}> = function StaffList() {
   const plainOptions = ['启用', '停用'];
 
   const dispatch = useDispatch();
-  const addStatus = useSelector(state=>(state as any).getIn(['setting']));
-
-
+  const workerStatus = useSelector(state=>(state as any).getIn(['setting']));
 
   useEffect(()=>{
     dispatch(requestWorkerData());
-    console.log("执行了");
   }, [dispatch]);
-  console.log(addStatus);
 
   return (
     <div id="StaffList">
@@ -67,10 +63,10 @@ const StaffList: React.FC<{}> = function StaffList() {
             <Icon type="menu" />
             <span>员工列表</span>
           </div>
-          <Link to="/setting/staff/staffEdit"><Button><Icon type="plus-circle" theme="filled" />新增员工</Button></Link>
+          <Link to={{pathname: '/setting/staff/staffEdit', state: {index:null,type:"add"}}}><Button><Icon type="plus-circle" theme="filled" />新增员工</Button></Link>
         </div>
         {/* 用户列表 */}
-        <CharacterListTable />
+        <CharacterListTable  data={workerStatus}/>
       </div>
     </div>
   )

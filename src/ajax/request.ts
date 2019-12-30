@@ -19,17 +19,15 @@ class HtttpRequest{
     return Object.assign({}, ...configs);
   }
 
-
-
   // 设置get请求别名
-  public get(url: string, config: AxiosRequestConfig = {}): AxiosPromise{
-    const newConfig = this.mergeConfig(config, {url, method: 'GET'});
+  public get(url: string, data: any = {},  config: AxiosRequestConfig = {}): AxiosPromise{
+    const newConfig = this.mergeConfig(config, {url, method: 'GET',params : {...data}});
     return this.request(newConfig);
   }
 
   // 设置post请求别名
   public post(url: string, data: any = {}, config: AxiosRequestConfig = {}): AxiosPromise{
-    const newConfig = this.mergeConfig(config, {url, method: 'POST'});
+    const newConfig = this.mergeConfig(config, {url, method: 'POST',data});
     return this.request(newConfig);
   }
 
@@ -61,6 +59,7 @@ class HtttpRequest{
       const {data: {code, message}} = response;
       if(code === 0){
         //成功
+          
       }else{
         // 失败
         //UI提示用户请求失败
@@ -74,12 +73,9 @@ class HtttpRequest{
     })
   }
 
-
   private handleError(message: string){
     messageAlert.error(message, 0.5);
   }
-
-  
 
 }
 

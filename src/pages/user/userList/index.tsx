@@ -1,8 +1,10 @@
 
-import React, { useCallback } from 'react'
+import React, { useCallback,useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import {requestUserData} from "../../../store/models/user";
 import { Icon, Input, DatePicker, Button, Tabs } from "antd"
 import UserListTable from "./children/userList"
+import {useDispatch,useSelector} from "react-redux"
 import moment from 'moment';
 import locale from 'antd/es/date-picker/locale/zh_CN';
 import "./style.scss"
@@ -22,6 +24,12 @@ const disabledDate = (current: moment.Moment | null) => {
 }
 
 const UserList: React.FC<{}> = function UserList() {
+
+  const dispatch = useDispatch();
+  const userStatus = useSelector(state=>(state as any).getIn(['user']));
+  useEffect(()=>{
+    dispatch(requestUserData());
+  }, [dispatch]);
 
   const onChange = useCallback((dates: any, dateStrings: [string, string]) => {
     console.log(dates, dateStrings);
@@ -65,7 +73,7 @@ const UserList: React.FC<{}> = function UserList() {
         </div>
 
         {/* 用户列表 */}
-        <UserListTable />
+        <UserListTable  data={userStatus}/>
 
       </div>
 
